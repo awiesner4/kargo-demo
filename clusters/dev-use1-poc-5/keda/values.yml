@@ -9,13 +9,13 @@ prometheus:
 priorityClassName: system-cluster-critical
 
 operator:
-  replicaCount: 3
+  replicaCount: 1
 
 metricsServer:
-  replicaCount: 3
+  replicaCount: 1
 
 webhooks:
-  replicaCount: 3
+  replicaCount: 1
 
 crds:
   install: true
