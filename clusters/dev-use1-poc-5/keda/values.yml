@@ -22,37 +22,37 @@ crds:
   additionalAnnotations:
     argocd.argoproj.io/sync-options: "ServerSideApply=true"
 
-topologySpreadConstraints:
-  # -- [Pod Topology Constraints] of KEDA operator pod
-  operator:
-    - maxSkew: 1
-      topologyKey: "topology.kubernetes.io/zone"
-      whenUnsatisfiable: DoNotSchedule
-      nodeTaintsPolicy: Honor
-      minDomains: 2
-      labelSelector:
-        matchLabels:
-          app: keda-operator
-  # -- [Pod Topology Constraints] of KEDA metrics apiserver pod
-  metricsServer:
-    - maxSkew: 1
-      topologyKey: "topology.kubernetes.io/zone"
-      whenUnsatisfiable: DoNotSchedule
-      nodeTaintsPolicy: Honor
-      minDomains: 2
-      labelSelector:
-        matchLabels:
-          app: keda-operator-metrics-apiserver
-  # -- [Pod Topology Constraints] of KEDA admission webhooks pod
-  webhooks:
-    - maxSkew: 1
-      topologyKey: "topology.kubernetes.io/zone"
-      whenUnsatisfiable: DoNotSchedule
-      nodeTaintsPolicy: Honor
-      minDomains: 2
-      labelSelector:
-        matchLabels:
-          app: keda-admission-webhooks
+# topologySpreadConstraints:
+#   # -- [Pod Topology Constraints] of KEDA operator pod
+#   operator:
+#     - maxSkew: 1
+#       topologyKey: "topology.kubernetes.io/zone"
+#       whenUnsatisfiable: DoNotSchedule
+#       nodeTaintsPolicy: Honor
+#       minDomains: 2
+#       labelSelector:
+#         matchLabels:
+#           app: keda-operator
+#   # -- [Pod Topology Constraints] of KEDA metrics apiserver pod
+#   metricsServer:
+#     - maxSkew: 1
+#       topologyKey: "topology.kubernetes.io/zone"
+#       whenUnsatisfiable: DoNotSchedule
+#       nodeTaintsPolicy: Honor
+#       minDomains: 2
+#       labelSelector:
+#         matchLabels:
+#           app: keda-operator-metrics-apiserver
+#   # -- [Pod Topology Constraints] of KEDA admission webhooks pod
+#   webhooks:
+#     - maxSkew: 1
+#       topologyKey: "topology.kubernetes.io/zone"
+#       whenUnsatisfiable: DoNotSchedule
+#       nodeTaintsPolicy: Honor
+#       minDomains: 2
+#       labelSelector:
+#         matchLabels:
+#           app: keda-admission-webhooks
     
 
 podDisruptionBudget:
