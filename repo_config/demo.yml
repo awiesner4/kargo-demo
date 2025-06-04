@@ -1,0 +1,19 @@
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: component1
+---
+apiVersion: v1
+kind: Secret
+type: Opaque
+metadata:
+  name: kargo-configs
+  namespace: kargo-configs
+  labels:
+    kargo.akuity.io/cred-type: git
+stringData:
+  repoURL: ${GITOPS_REPO_URL}
+  username: ${GITHUB_USERNAME}
+  password: ${GITHUB_PAT}
