@@ -3,14 +3,16 @@
 apiVersion: v1
 kind: Namespace
 metadata:
+  labels:
+    kargo.akuity.io/project: "true"
   name: component1
 ---
 apiVersion: v1
 kind: Secret
 type: Opaque
 metadata:
-  name: kargo-configs
-  namespace: kargo-configs
+  name: github-repo-creds
+  namespace: component1
   labels:
     kargo.akuity.io/cred-type: git
 stringData:
