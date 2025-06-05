@@ -6,5 +6,5 @@ helmCharts:
     valuesFile: values.yml
     version: 0.1.0
 helmGlobals:
-  chartHome: ../../../charts/
+  chartHome: ./src/charts
 kind: Kustomization
