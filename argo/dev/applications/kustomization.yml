@@ -1,6 +1,0 @@
-resources:
-- ../dev-use1-poc-5/component1/application.yml
-- ../dev-use1-app-3/component1/application.yml
-- ../dev-use1-app-4/component1/application.yml
-- ../dev-use1-app-5/component1/application.yml
-- ../dev/component1/application.yml

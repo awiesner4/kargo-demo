@@ -1,0 +1,17 @@
+resources:
+- dev/dev-use1-poc-5/component1/application.yml
+- dev/dev-use1-app-3/component1/application.yml
+- dev/dev-use1-app-4/component1/application.yml
+- dev/dev-use1-app-5/component1/application.yml
+- dev/dev-use1-mgt-1/component1/application.yml
+- dev/dev/component1/application.yml
+- staging/stg-use1-app-3/component1/application.yml
+- staging/stg-use1-app-4/component1/application.yml
+- staging/stg-use1-app-5/component1/application.yml
+- staging/stg-use1-mgt-1/component1/application.yml
+- staging/staging/component1/application.yml
+- prod/prd-use1-app-2/component1/application.yml
+- prod/prd-use1-app-3/component1/application.yml
+- prod/prd-use1-app-4/component1/application.yml
+- prod/prd-use1-mgt-1/component1/application.yml
+- prod/prod/component1/application.yml
