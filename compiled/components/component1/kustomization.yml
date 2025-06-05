@@ -9,3 +9,6 @@ helmCharts:
 helmGlobals:
   chartHome: ../../../charts
 kind: Kustomization
+
+resources:
+  - resources/configmap-component1.yml
