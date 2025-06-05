@@ -73,4 +73,6 @@ helm install kargo \
 # need to enable LoadRestrictionsNone and enable helm for kustomize to work
 kubectl -n argocd patch configmap argocd-cm \
   --type=merge \
-  -p '{"data":{"kustomize.buildOptions":"--load-restrictor LoadRestrictionsNone --enable-helm"}}'
+  -p '{"data":{"kustomize.buildOptions":"--load-restrictor LoadRestrictionsNone --enable-helm","timeout.reconciliation":"15s"}}'
+
+kubectl -n argocd rollout restart deployment argocd-repo-server

@@ -6,10 +6,7 @@ metadata:
 spec:
   promotionPolicies:
   - stageSelector:
-      name: "glob:*-use1-app-*"
-    autoPromotionEnabled: true
-  - stageSelector:
-      name: "glob:*-use1-mgt-*"
+      name: "glob:*-use1-*"
     autoPromotionEnabled: true
   - stageSelector:
       name: dev
