@@ -1,0 +1,13 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: ProjectConfig
+metadata:
+  name: multi-warehouse-separate-stages
+  namespace: multi-warehouse-separate-stages
+spec:
+  promotionPolicies:
+  - stageSelector:
+      name: dev-use1-poc-5
+    autoPromotionEnabled: true
+  - stageSelector:
+      name: "glob:*-config"
+    autoPromotionEnabled: true

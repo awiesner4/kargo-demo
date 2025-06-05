@@ -1,0 +1,321 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: dev-use1-poc-5-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: dev-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - dev-use1-poc-5-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: dev-use1-app-3-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - dev-use1-poc-5-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: dev-use1-app-4-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - dev-use1-poc-5-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: dev-use1-app-5-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - dev-use1-poc-5-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: dev-use1-mgt-1-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - dev-use1-poc-5-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: staging-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - dev-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: stg-use1-app-3-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - dev-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: stg-use1-app-4-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - dev-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: stg-use1-app-5-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - dev-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: stg-use1-mgt-1-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - dev-use1-mgt-1-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: prod-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - staging-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: prd-use1-app-3-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - staging-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: prd-use1-app-4-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - staging-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: prd-use1-app-2-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - staging-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: prd-use1-mgt-1-base
+  namespace: multi-warehouse-separate-stages
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-base
+    sources:
+      stages:
+      - stg-use1-mgt-1-base
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process

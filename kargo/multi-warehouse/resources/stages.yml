@@ -1,256 +1,9 @@
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Project
-metadata:
-  name: component1
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/components/component1
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-dev-use1-poc-5
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/dev-use1-poc-5/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-dev-use1-app-3
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/dev-use1-app-3/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-dev-use1-app-4
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/dev-use1-app-4/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-dev-use1-app-5
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/dev-use1-app-5/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-dev
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/dev/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-dev-use1-mgt-1
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/dev-use1-mgt-1/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-stg-use1-app-3
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/stg-use1-app-3/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-stg-use1-app-4
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/stg-use1-app-4/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-stg-use1-app-5
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/stg-use1-app-5/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-staging
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/staging/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-stg-use1-mgt-1
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/stg-use1-mgt-1/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-prd-use1-app-3
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/prd-use1-app-3/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-prd-use1-app-4
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/prd-use1-app-4/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-prd-use1-app-5
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/prd-use1-app-5/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-prod
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/prod/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: Warehouse
-metadata:
-  name: component1-configs-prd-use1-mgt-1
-  namespace: component1
-spec:
-  subscriptions:
-  - git:
-      repoURL: https://github.com/awiesner4/kargo-demo.git
-      includePaths:
-      - compiled/clusters/prd-use1-mgt-1/component1/values.yml
----
-apiVersion: kargo.akuity.io/v1alpha1
-kind: PromotionTask
-metadata:
-  name: demo-promo-process
-  namespace: component1
-spec:
-  vars:
-  - name: gitopsRepo
-    value: https://github.com/awiesner4/kargo-demo
-  steps:
-  - uses: git-clone
-    config:
-      repoURL: ${{ vars.gitopsRepo }}
-      checkout:
-      - branch: main
-        path: ./src
-      - branch: stage/${{ ctx.stage }}
-        create: true
-        path: ./out
-  - uses: git-clear
-    config:
-      path: ./out
-  - uses: copy
-    config:
-      inPath: ./src/compiled/clusters/${{ ctx.stage }}/component1
-      outPath: ./src/compiled/components/component1
-  - uses: kustomize-build
-    config:
-      path: ./src/compiled/components/component1
-      outPath: ./out/clusters/${{ ctx.stage }}/component1
-  - uses: git-commit
-    as: commit
-    config:
-      path: ./out
-      message: "Updating component1 for ${{ ctx.meta.message }}"
-  - uses: git-push
-    config:
-      path: ./out
 ---
 apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: dev-use1-poc-5
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -274,7 +27,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: dev
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -300,7 +53,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: dev-use1-app-3
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -325,7 +78,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: dev-use1-app-4
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -350,7 +103,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: dev-use1-app-5
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -375,7 +128,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: dev-use1-mgt-1
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -400,7 +153,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: staging
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -426,7 +179,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: stg-use1-app-3
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -451,7 +204,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: stg-use1-app-4
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -476,7 +229,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: stg-use1-app-5
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -501,7 +254,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: stg-use1-mgt-1
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -526,7 +279,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: prod
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -552,7 +305,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: prd-use1-app-3
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -577,7 +330,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: prd-use1-app-4
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -602,7 +355,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: prd-use1-app-5
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:
@@ -627,7 +380,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: prd-use1-mgt-1
-  namespace: component1
+  namespace: multi-warehouse-single-stage
 spec:
   requestedFreight:
   - origin:

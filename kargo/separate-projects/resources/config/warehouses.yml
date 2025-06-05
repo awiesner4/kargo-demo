@@ -1,0 +1,192 @@
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-dev-use1-poc-5
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/dev-use1-poc-5/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-dev-use1-app-3
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/dev-use1-app-3/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-dev-use1-app-4
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/dev-use1-app-4/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-dev-use1-app-5
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/dev-use1-app-5/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-dev
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/dev/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-dev-use1-mgt-1
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/dev-use1-mgt-1/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-stg-use1-app-3
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/stg-use1-app-3/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-stg-use1-app-4
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/stg-use1-app-4/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-stg-use1-app-5
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/stg-use1-app-5/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-staging
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/staging/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-stg-use1-mgt-1
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/stg-use1-mgt-1/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-prd-use1-app-3
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/prd-use1-app-3/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-prd-use1-app-4
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/prd-use1-app-4/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-prd-use1-app-2
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/prd-use1-app-2/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-prod
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/prod/component1/values.yml
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-configs-prd-use1-mgt-1
+  namespace: separate-projects-config
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/clusters/prd-use1-mgt-1/component1/values.yml

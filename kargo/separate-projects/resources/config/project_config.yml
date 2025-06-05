@@ -1,0 +1,23 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: ProjectConfig
+metadata:
+  name: separate-projects-config
+  namespace: separate-projects-config
+spec:
+  promotionPolicies:
+  - stageSelector:
+      name: "glob:*-use1-app-*"
+    autoPromotionEnabled: true
+  - stageSelector:
+      name: "glob:*-use1-mgt-*"
+    autoPromotionEnabled: true
+  - stageSelector:
+      name: dev
+    autoPromotionEnabled: true
+  - stageSelector:
+      name: staging
+    autoPromotionEnabled: true
+  - stageSelector:
+      name: prod
+    autoPromotionEnabled: true
+---

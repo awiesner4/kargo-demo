@@ -4,3 +4,4 @@ metadata:
   name: configmap-component1
 data:
   key: test-value
+  key2: test-value2

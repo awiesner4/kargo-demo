@@ -1,0 +1,10 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: ProjectConfig
+metadata:
+  name: separate-projects-base
+  namespace: separate-projects-base
+spec:
+  promotionPolicies:
+  - stageSelector:
+      name: dev-use1-poc-5
+    autoPromotionEnabled: true

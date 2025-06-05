@@ -1,0 +1,10 @@
+resources:
+- resources/namespace.yml
+- resources/project.yml
+- resources/project_config.yml
+- resources/warehouses.yml
+- resources/stages.yml
+- resources/promotion_tasks.yml
+
+generators:
+  - keychain-secret-generator.yaml

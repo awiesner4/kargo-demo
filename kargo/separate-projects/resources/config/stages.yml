@@ -1,0 +1,307 @@
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: dev-use1-poc-5
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-dev-use1-poc-5
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: dev
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-dev
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: dev-use1-app-3
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-dev-use1-app-3
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: dev-use1-app-4
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-dev-use1-app-4
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: dev-use1-app-5
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-dev-use1-app-5
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: dev-use1-mgt-1
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-dev-use1-mgt-1
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: staging
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-staging
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: stg-use1-app-3
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-stg-use1-app-3
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: stg-use1-app-4
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-stg-use1-app-4
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: stg-use1-app-5
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-stg-use1-app-5
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: stg-use1-mgt-1
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-stg-use1-mgt-1
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: prod
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-prod
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: prd-use1-app-3
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-prd-use1-app-3
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: prd-use1-app-4
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-prd-use1-app-4
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: prd-use1-app-2
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-prd-use1-app-2
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: prd-use1-mgt-1
+  namespace: separate-projects-config
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: component1-configs-prd-use1-mgt-1
+    sources:
+      direct: true
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: demo-promo-process
+        as: promo-process

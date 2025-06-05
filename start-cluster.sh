@@ -1,8 +1,7 @@
 #!/bin/sh
-
 set -x
 
-argo_cd_chart_version=7.7.0
+argo_cd_chart_version=8.0.14
 argo_rollouts_chart_version=2.39.1
 cert_manager_chart_version=1.16.1
 
@@ -71,12 +70,7 @@ helm install kargo \
   --set api.adminAccount.tokenSigningKey=iwishtowashmyirishwristwatch \
   --wait
 
-export GITOPS_REPO_URL=https://github.com/awiesner4/kargo-demo.git
-export GITHUB_USERNAME=awiesner4
-export GITHUB_PAT=$(security find-generic-password -s "ghcr-pat" -w)
-
-envsubst < ./repo_config/demo.yml | kubectl apply -f -
-
+# need to enable LoadRestrictionsNone and enable helm for kustomize to work
 kubectl -n argocd patch configmap argocd-cm \
   --type=merge \
   -p '{"data":{"kustomize.buildOptions":"--load-restrictor LoadRestrictionsNone --enable-helm"}}'

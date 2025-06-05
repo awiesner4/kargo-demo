@@ -1,0 +1,11 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: component1-base
+  namespace: separate-projects-base
+spec:
+  subscriptions:
+  - git:
+      repoURL: https://github.com/awiesner4/kargo-demo.git
+      includePaths:
+      - compiled/components/component1

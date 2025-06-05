@@ -1,0 +1,41 @@
+
+apiVersion: kargo.akuity.io/v1alpha1
+kind: PromotionTask
+metadata:
+  name: demo-promo-process
+  namespace: multi-warehouse-separate-stages
+spec:
+  vars:
+  - name: gitopsRepo
+    value: https://github.com/awiesner4/kargo-demo
+  - name: cleanStage
+    value: ${{ replace(replace(ctx.stage, "-base", ""), "-config", "") }}
+  steps:
+  - uses: git-clone
+    config:
+      repoURL: ${{ vars.gitopsRepo }}
+      checkout:
+      - branch: main
+        path: ./src
+      - branch: stage/${{ vars.cleanStage }}
+        create: true
+        path: ./out
+  - uses: git-clear
+    config:
+      path: ./out
+  - uses: copy
+    config:
+      inPath: ./src/compiled/clusters/${{ vars.cleanStage }}/component1
+      outPath: ./src/compiled/components/component1
+  - uses: kustomize-build
+    config:
+      path: ./src/compiled/components/component1
+      outPath: ./out/clusters/${{ vars.cleanStage }}/component1
+  - uses: git-commit
+    as: commit
+    config:
+      path: ./out
+      message: "Updating component1 for ${{ ctx.meta.message }}"
+  - uses: git-push
+    config:
+      path: ./out
